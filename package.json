@@ -33,8 +33,11 @@
     "image-loader": "0.0.1",
     "image-webpack-loader": "^4.3.0",
     "nodemon": "^1.17.5",
+    "pg": "^7.4.3",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
+    "request-promise": "^4.2.2",
+    "sequelize": "^4.37.10",
     "webpack": "^4.10.2",
     "webpack-cli": "^2.1.4"
   },
