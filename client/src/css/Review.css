@@ -1,0 +1,304 @@
+:local(.container) {
+    margin-top: 20px;
+    width: 630px;
+    /* border-bottom: 1px solid lightgrey; */
+}
+
+:local(.passport_container) {
+    width: 247px;
+    height: 222px;
+    margin: 0 3px 0 3px;
+    float: left;
+}
+
+:local(.profile_photo) {
+    height: 60px;
+    width:60px;
+    border-radius: 3px;
+    float: left;
+}
+
+:local(.passport_stats) {
+    float: left;
+    margin: 0 10px 0 10px;
+    list-style-type: none;
+}
+
+:local(.profile_username) {
+    cursor:pointer;
+    color: #0073bb;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 150px;
+    height: 20px;
+}
+
+:local(.profile_location) {
+    color:black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    width: 150px;
+    height: 20px;
+}
+
+:local(.profile_friends_count) {
+    color: #5e5e5e;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 150px;
+    height: 20px;  
+    margin: 0 0 0 0;
+}
+
+:local(.friends_icon) {
+    float: left;
+    height: 20px;
+}
+
+:local(.pfc_text) {
+    float: left;
+}
+
+:local(.profile_review_count) {
+    color: #5e5e5e;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 150px;
+    height: 20px;  
+    margin: 0 0 0 6px;
+}
+
+:local(.small_star_icon) {
+    float: left;
+    height: 14px;
+    width: 14px;
+    border-radius: 3px;
+    background-color: orangered;
+}
+
+:local(.prc_text) {
+    float: left;
+    margin-left: 5px;
+}
+
+:local(.passport_options_container) {
+    width: 220px;
+    height: 125px;
+    float: left;
+}
+
+:local(.passport_option_container) {
+    width: 220px;
+    height: 25px;
+    /* border-bottom: 1px solid lightgrey; */
+    list-style-type: none;
+}
+
+:local(.passport_option_text) {
+    height: 24px;
+    width: 190px;
+    border-bottom: 1px solid lightgrey;
+    float: left;
+    font-size: 12px;
+    color: #0073bb;
+    cursor:pointer;
+    padding-top: 1px;
+    margin: 0 -4px 4px 10px;
+}
+
+:local(.passport_option_text:hover) {
+    text-decoration: underline;
+}
+
+:local(.passport_option_icon) {
+    height: 24px;
+    width: 20px;
+    float: left;
+}
+
+:local(.review_content_container) {
+    width: 370px;
+    float: left;
+}
+
+:local(.review_postdate) {
+    color: #636363;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    float: right;
+    margin-top: 3px;
+    margin-right: 190px;
+}
+
+:local(.rating_photo) {
+    float: left;
+}
+
+:local(.review_description) {
+    width: 370px;
+    font-size: 15px;
+    color: #353535;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+}
+
+:local(.single_photo_container) {
+    height: 350px;
+    width: 350px;
+    margin-top: 20px;
+    list-style-type: none;
+    border-radius: 5px;
+}
+
+:local(.duplex_photo_container) {
+    height: 170px;
+    width: 350px;
+    margin-top: 20px;
+    list-style-type: none;
+    border-radius: 5px;
+}
+
+:local(.triple_photo_container) {
+    height: 530px;
+    width: 350px;
+    margin-top: 20px;
+    list-style-type: none;
+    border-radius: 5px;
+}
+
+:local(.single_photo) {
+    height: 350px;
+    width: 350px;
+    background: blue;
+    float: left;
+    border-radius: 5px;
+}
+
+:local(.duplex_photo_left) {
+    height: 170px;
+    width: 170px;
+    float: left;
+    margin-right: 5px;
+    background: blue;
+    border-radius: 5px;
+}
+:local(.duplex_photo_right) {
+    height: 170px;
+    width: 170px;
+    float: left;
+    margin-left: 5px;
+    background: blue;
+    border-radius: 5px;
+}
+
+:local(.voting_buttons_container) {
+    width: 300px;
+    height: 30px;
+    margin-top: 40px;
+}
+
+:local(.vote_item_0) {
+    float: right;
+    width: 90px;
+    height: 30px;
+    margin-right: 4px;
+    margin-left: 4px;
+    background: linear-gradient(#fff, #f5f5f5);
+    border-radius: 4px;
+    border: 1px solid #cccccc;
+    list-style-type: none;
+    cursor:pointer;
+    font-size: 12px;
+    color: #606060;
+}
+
+:local(.vote_item_1) {
+    float: right;
+    width: 90px;
+    height: 30px;
+    margin-right: 4px;
+    margin-left: 4px;
+    background: linear-gradient(#0097ec, #0097ec);
+    border-radius: 4px;
+    border: 1px solid #0066a0;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+    list-style-type: none;
+    cursor:pointer;
+    font-size: 12px;
+    color: #fff;
+}
+
+:local(.vote_option_container_0) {
+    width: 90px;
+    height: 30px;
+    float: right;
+    margin: -1px 4px 0 4px;
+    background: linear-gradient(#fff, #f5f5f5);
+    border-radius: 4px;
+    border: 1px solid #cccccc;
+    list-style-type: none;
+    cursor:pointer;
+    font-size: 12px;
+    color: #606060;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+:local(.vote_option_container_1) {
+    width: 90px;
+    height: 30px;
+    float: right;
+    margin: -1px 4px 0 4px;
+    background: linear-gradient(#0097ec, #0097ec);
+    border-radius: 4px;
+    border: 1px solid #0066a0;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+    list-style-type: none;
+    cursor:pointer;
+    font-size: 12px;
+    color: #fff;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+:local(.vote_option_text) {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    height: 10px;
+    margin: 8px 2px 10px 0;
+    width: 60px;
+    float: right;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+:local(.vote_option_icon) {
+    width: 10px;
+    height: 10px;
+    margin-left: 2px;
+}
+
+:local(.bottom_border) {
+    width: 630px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid lightgrey;
+    float: left;
+}
+
+:local(.user_votedOn) {
+    font-weight: bold;
+    color: #41a700;
+    position: relative;
+    bottom: 50px;
+}
+
+:local(.user_votedOff) {
+    font-weight: bold;
+    color: #fff;
+    position: relative;
+    bottom: 50px;
+}

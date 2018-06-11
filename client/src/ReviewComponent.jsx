@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from './Header.jsx';
-import LeaveReview from './LeaveReview.jsx';
-import Review from './Review.jsx';
+import Header from './components/Header.jsx';
+import LeaveReview from './components/LeaveReview.jsx';
+import Review from './components/Review.jsx';
 
 export default class ReviewComponent extends React.Component {
     constructor(props) {
@@ -21,7 +21,7 @@ export default class ReviewComponent extends React.Component {
                     cool_count: 0,
                     reviewDescription: 'I LOVE Hungry Bear. Absolutely awesome. The atmosphere of the place was comfortable af. I now feel bomb as F#!K. Bring your friends and family to Hungry Bear to try the Fries',
                     img_src: "https://avatars0.githubusercontent.com/u/33384155?s=460&v=4",
-                    rating: 5,
+                    rating: 4,
                     photos: ["https://s3-media3.fl.yelpcdn.com/bphoto/LL_ibUp-R_2-iXkdO4V4-Q/o.jpg","https://s3-media1.fl.yelpcdn.com/bphoto/FBoLLCJsOE2lL-Mbcy9S9w/o.jpg"]
                 },
                 {
@@ -37,7 +37,7 @@ export default class ReviewComponent extends React.Component {
                     reviewDescription: 'Turn around. Hungry Bear is not worth your money. The manager especially was awful. If you get the Burger, expect it to be soggy. I couldnt believe it. When my tastebuds made contact with the Fries, I felt disgusted. I have to give the place a 1 out of 5.',
                     img_src: "https://avatars2.githubusercontent.com/u/32969152?s=460&v=4",
                     rating: 1,
-                    photos: ["https://s3-media3.fl.yelpcdn.com/bphoto/JIZyDmBBl0flCyQsliQqRA/o.jpg"]
+                    photos: ["https://s3-media3.fl.yelpcdn.com/bphoto/JIZyDmBBl0flCyQsliQqRA/o.jpg","https://s3-media3.fl.yelpcdn.com/bphoto/JIZyDmBBl0flCyQsliQqRA/o.jpg","https://s3-media3.fl.yelpcdn.com/bphoto/JIZyDmBBl0flCyQsliQqRA/o.jpg"]
                 }
             ]
         }

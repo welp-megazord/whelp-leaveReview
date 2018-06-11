@@ -1,0 +1,44 @@
+:local(.headertext) {
+    font-size: 21px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+:local(.highlight) {
+    color: #d32323;
+    font-weight: bold;
+}
+
+:local(.inputbox) {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    border-color: #595959;
+    width: 300px;
+    height: 30px;
+    font-size: 14px;
+}
+
+:local(.btn) {
+    border: solid 1px #595959;
+    border-radius: 3px;
+    width: 36px;
+    height: 32px;
+    position: relative;
+    top: 4px;
+    right: 36px;
+    background: linear-gradient(#d90007, #c91400);
+}
+:local(.btn:hover) {
+    background: linear-gradient(#ed0008, #dd1600);
+}
+:local(.btn:active) {
+    background: linear-gradient(#c50006, #b51200);
+}
+
+:local(.icon) {
+    color: #fff;
+    right: 2px;
+    bottom: 2px;
+    position: relative;
+}

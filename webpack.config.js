@@ -19,6 +19,24 @@ module.exports = {
                 presets: ['react', 'es2015'],
             },
         },
+        {
+            test: /\.css$/,
+            loader: 'style-loader!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]' 
+        },
+        {
+            test: /\.(jpe?g|png|gif|svg)$/i,
+            loaders: ['file-loader?context=src/images&name=images/[path][name].[ext]', {
+                loader: 'image-webpack-loader',
+                query: {
+                    gifsicle: {
+                        interlaced: false,
+                    },
+                    optipng: {
+                        optimizationLevel: 7,
+                    },
+                }
+            }]
+        } 
     ],
     },
 };

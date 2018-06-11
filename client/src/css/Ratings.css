@@ -1,0 +1,100 @@
+:local(.offscreen) {
+    clip: rect(0 0 0 0);
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+}
+
+:local(.i_stars) {
+    background: url(https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_design_web/9b34e39ccbeb/assets/img/stars/stars.png) no-repeat;
+    background-size: 132px 560px;
+    display: inline-block;
+    vertical-align: middle
+}
+
+@media print {
+    :local(.i_stars) {
+        background-image: none !important
+    }
+
+    :local(.image) {
+        position: relative;
+        width: auto;
+        height: auto
+    }
+}
+
+:local(.i_stars__large_0) {
+    width: 102px;
+    height: 18px;
+    background-position: 0 -240px;
+}
+@media print {
+    :local(.image){
+        left: 0;
+        top: -240px;
+    }
+}
+
+:local(.i_stars__large_1) {
+    width: 102px;
+    height: 18px;
+    background-position: 0 -258px;
+}
+@media print {
+    :local(.image){
+        left: 0;
+        top: -258px;
+    }
+}
+
+:local(.i_stars__large_2) {
+    width: 102px;
+    height: 18px;
+    background-position: 0 -294px;
+}
+@media print {
+    :local(.image){
+        left: 0;
+        top: -294px;
+    }
+}
+
+:local(.i_stars__large_3) {
+    width: 102px;
+    height: 18px;
+    background-position: 0 -330px;
+}
+@media print {
+    :local(.image){
+        left: 0;
+        top: -330px;
+    }
+}
+
+:local(.i_stars__large_4) {
+    width: 102px;
+    height: 18px;
+    background-position: 0 -366px;
+}
+@media print {
+    :local(.image){
+        left: 0;
+        top: -366px;
+    }
+}
+
+:local(.i_stars__large_5) {
+    width: 102px;
+    height: 18px;
+    background-position: 0 -402px;
+}
+@media print {
+    :local(.image){
+        left: 0;
+        top: -402px;
+    }
+}
