@@ -169,7 +169,7 @@
 :local(.single_photo) {
     height: 350px;
     width: 350px;
-    background: blue;
+    background: #fff;
     float: left;
     border-radius: 5px;
 }
@@ -179,7 +179,7 @@
     width: 170px;
     float: left;
     margin-right: 5px;
-    background: blue;
+    background: #fff;
     border-radius: 5px;
 }
 :local(.duplex_photo_right) {
@@ -187,7 +187,7 @@
     width: 170px;
     float: left;
     margin-left: 5px;
-    background: blue;
+    background: #fff;
     border-radius: 5px;
 }
 

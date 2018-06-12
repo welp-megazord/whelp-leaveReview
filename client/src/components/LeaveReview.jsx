@@ -8,7 +8,7 @@ export default class LeaveReview extends React.Component {
         super(props) 
         this.state = {
             RestaurantName: props.RestaurantName,
-            Rating: 4,
+            Rating: 0,
             SelectedRating: 0
             }
         }
@@ -28,14 +28,14 @@ export default class LeaveReview extends React.Component {
                 <div className={styles.starboard}>
                     <div className={styles.widgetcontainer}>
                         <ul className={styles.widgetboard}>
-                            <li onMouseEnter={() => this.updateRating(5)} className={styles['Rating-'+this.state.Rating+'--Star-5']}><img /> < StarIcon/> </li>
-                            <li onMouseEnter={() => this.updateRating(4)} className={styles['Rating-'+this.state.Rating+'--Star-4']}><img /> < StarIcon/> </li>
-                            <li onMouseEnter={() => this.updateRating(3)} className={styles['Rating-'+this.state.Rating+'--Star-3']}><img /> < StarIcon/> </li>
-                            <li onMouseEnter={() => this.updateRating(2)} className={styles['Rating-'+this.state.Rating+'--Star-2']}><img /> < StarIcon/> </li>
-                            <li onMouseEnter={() => this.updateRating(1)} className={styles['Rating-'+this.state.Rating+'--Star-1']}><img /> < StarIcon/> </li>
+                            <li onMouseEnter={() => this.updateRating(5)} className={styles['Rating-'+String(this.state.Rating)+'--Star-5']} onClick={() => this.props.writeReviewToggleOn(this.state.Rating)}><img /> < StarIcon/> </li>
+                            <li onMouseEnter={() => this.updateRating(4)} className={styles['Rating-'+String(this.state.Rating)+'--Star-4']} onClick={() => this.props.writeReviewToggleOn(this.state.Rating)}><img /> < StarIcon/> </li>
+                            <li onMouseEnter={() => this.updateRating(3)} className={styles['Rating-'+String(this.state.Rating)+'--Star-3']} onClick={() => this.props.writeReviewToggleOn(this.state.Rating)}><img /> < StarIcon/> </li>
+                            <li onMouseEnter={() => this.updateRating(2)} className={styles['Rating-'+String(this.state.Rating)+'--Star-2']} onClick={() => this.props.writeReviewToggleOn(this.state.Rating)}><img /> < StarIcon/> </li>
+                            <li onMouseEnter={() => this.updateRating(1)} className={styles['Rating-'+String(this.state.Rating)+'--Star-1']} onClick={() => this.props.writeReviewToggleOn(this.state.Rating)}><img /> < StarIcon/> </li>
                         </ul>
                     </div>
-                    <a on className={styles.link}>Start your review of <strong>{this.state.RestaurantName}.</strong></a>
+                    <a className={styles.link} onClick={() => this.props.writeReviewToggleOn(this.state.Rating)}>Start your review of <strong>{this.state.RestaurantName}.</strong></a>
                 </div>
             </li>
         )
