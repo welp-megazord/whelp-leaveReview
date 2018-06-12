@@ -41,14 +41,12 @@ export default class Review extends React.Component {
     }
 
     hoveringOn() {
-        console.log('on')
         this.setState({
             hovering: true,
             opacity: 1
         })
     }
     hoveringOff() {
-        console.log('off')
         this.setState({
             hovering: false,
             opacity: 0
@@ -126,20 +124,20 @@ export default class Review extends React.Component {
                         {
                             this.state.photos.length === 1?
                             <ul className={styles.single_photo_container}>
-                                <li className={styles.single_photo} style={{"backgroundImage": "url("+this.state.photos[0]+")", "background-size": "350px 350px"}}></li>
+                                <li className={styles.single_photo} style={{"backgroundImage": "url("+this.state.photos[0]+")", "backgroundSize": "350px 350px"}}></li>
                             </ul>
                             :
                             this.state.photos.length === 2?
                             <ul className={styles.duplex_photo_container}>
-                                <li className={styles.duplex_photo_left} style={{"backgroundImage": "url("+this.state.photos[0]+")", "background-size": "170px 170px"}}></li>
-                                <li className={styles.duplex_photo_right} style={{"backgroundImage": "url("+this.state.photos[1]+")", "background-size": "170px 170px"}}></li>
+                                <li className={styles.duplex_photo_left} style={{"backgroundImage": "url("+this.state.photos[0]+")", "backgroundSize": "170px 170px"}}></li>
+                                <li className={styles.duplex_photo_right} style={{"backgroundImage": "url("+this.state.photos[1]+")", "backgroundSize": "170px 170px"}}></li>
                             </ul>
                             :
                             this.state.photos.length === 3?
                             <ul className={styles.triple_photo_container}>
-                                <li className={styles.single_photo} style={{"backgroundImage": "url("+this.state.photos[0]+")", "background-size": "350px 350px"}}></li>
-                                <li className={styles.duplex_photo_left} style={{"backgroundImage": "url("+this.state.photos[1]+")", "marginTop": "10px", "background-size": "170px 170px"}}></li>
-                                <li className={styles.duplex_photo_right} style={{"backgroundImage": "url("+this.state.photos[2]+")", "marginTop": "10px", "background-size": "170px 170px"}}></li>
+                                <li className={styles.single_photo} style={{"backgroundImage": "url("+this.state.photos[0]+")", "backgroundSize": "350px 350px"}}></li>
+                                <li className={styles.duplex_photo_left} style={{"backgroundImage": "url("+this.state.photos[1]+")", "marginTop": "10px", "backgroundSize": "170px 170px"}}></li>
+                                <li className={styles.duplex_photo_right} style={{"backgroundImage": "url("+this.state.photos[2]+")", "marginTop": "10px", "backgroundSize": "170px 170px"}}></li>
                             </ul>
                             :
                             null

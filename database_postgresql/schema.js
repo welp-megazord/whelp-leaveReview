@@ -27,7 +27,7 @@ const reviews = connection.define('reviews', {
         allowNull: false
     },
     description: {
-        type: Sequelize.STRING(300),
+        type: Sequelize.STRING(500),
         allowNull: false
     }
 }, { timestamps: false });

@@ -5,7 +5,11 @@ const { reviews } = require('../../database_postgresql/schema.js');
 
 const user_controllers = {
     get: function(req, res) {
-        users.findAll({})
+        users.findAll({
+            where: {
+                id: req.headers.user_id
+            }
+        })
         .then(data => {
             console.log('user data received')
             res.status(200).send(data)
@@ -23,7 +27,11 @@ const user_controllers = {
 
 const photo_controllers = {
     get: function(req, res) {
-        photos.findAll({})
+        photos.findAll({
+            where: {
+                review_id: req.headers.review_id
+            }
+        })
         .then(data => {
             console.log('photo data received')
             res.status(200).send(data)
@@ -59,7 +67,12 @@ const restaurant_controllers = {
 
 const review_controllers = {
     get: function(req, res) {
-        reviews.findAll({})
+        let id = req.headers.restaurant_id
+        reviews.findAll({
+            where: {
+                restaurant_id: id
+            }
+        })
         .then(data => {
             console.log('review data received')
             res.status(200).send(data)
