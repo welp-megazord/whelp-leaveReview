@@ -44,12 +44,12 @@ const users = connection.define('users', {
         type: Sequelize.STRING(50),
         allowNull: false
     },
-    profilephoto: {
-        type: Sequelize.STRING(200),
-        allowNull: false
-    },
     counts: {
         type: Sequelize.STRING(50),
+        allowNull: false
+    },
+    profilephoto: {
+        type: Sequelize.STRING(250),
         allowNull: false
     },
     location: {

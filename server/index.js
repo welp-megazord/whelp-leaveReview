@@ -2,7 +2,7 @@ const parser = require('body-parser');
 const path = require('path');
 const express = require('express');
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const App = express();
 require('../database_postgresql/index.js')
 const {router} = require('./router');
