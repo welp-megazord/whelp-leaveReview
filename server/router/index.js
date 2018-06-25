@@ -8,7 +8,9 @@ const { review_controllers } = require('../controller/index.js');
 
 router.route('/users')
     .get(user_controllers.get)
-    .post(user_controllers.post);
+    .post(user_controllers.post)
+    .put(user_controllers.put)
+    .delete(user_controllers.delete);
 
 router.route('/photos')
     .get(photo_controllers.get)
