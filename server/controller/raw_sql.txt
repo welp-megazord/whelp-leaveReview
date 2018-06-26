@@ -1,0 +1,6 @@
+INSERT INTO "users" ("id","name","counts","profilephoto","location") VALUES (DEFAULT,'Mia Boyle','6,16,82','https://s3.amazonaws.com/uifaces/faces/twitter/s4f1/128.jpg','Tessberg');
+
+SELECT "id", "name", "counts", "profilephoto", "location" FROM "users" AS "users" WHERE "users"."id" = 10000000;
+UPDATE "users" SET "name"='Kevin',"location"='LA' WHERE "id" = 10000000
+
+DELETE FROM "users" WHERE "id" IN (SELECT "id" FROM "users" WHERE "id" = 10000000 LIMIT 1)

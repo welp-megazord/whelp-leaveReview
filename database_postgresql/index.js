@@ -1,7 +1,10 @@
 const Sequelize = require('sequelize');
-
-const connection = new Sequelize('reviews','Kevin','', {
-    host: 'localhost',
+const db = process.env.DB || 'reviews';
+const user = process.env.USER || 'Kevin';
+const pass = process.env.PASS || '';
+const host = process.env.HOST || 'localhost';
+const connection = new Sequelize(db, user, pass, {
+    host: host,
     dialect: 'postgres'
 });
 

@@ -73,7 +73,7 @@ const photos = connection.define('photos', {
     }
 }, { timestamps: false }) 
 
-connection.sync({force: true})
+connection.sync({force: false})
     .then(() => {
     // users.bulkCreate(user_seeds);
     // photos.bulkCreate(photo_seeds);

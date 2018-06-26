@@ -4,7 +4,8 @@ const express = require('express');
 
 const PORT = process.env.PORT || 3000;
 const App = express();
-require('../database_postgresql/index.js')
+require('../database_postgresql');
+// require('../database_mongodb');
 const {router} = require('./router');
 
 App.use(parser.json());
