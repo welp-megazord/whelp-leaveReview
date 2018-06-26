@@ -46,7 +46,7 @@ export default class ReviewComponent extends React.Component {
     })
       .then(({ data }) => {
         let reviews = [];
-        console.log('in reviews: ', data)
+        // console.log('in reviews: ', data)
         this.setState({
           update: true
         })
@@ -72,7 +72,7 @@ export default class ReviewComponent extends React.Component {
             params: { 'user_id': review.user_id }
           })
             .then(({ data }) => {
-              console.log('users: ', data);
+              // console.log('users: ', data);
               let user_counts = data[0].counts.split(',');
               newReview.username = data[0].name
               newReview.location = data[0].location
@@ -85,7 +85,7 @@ export default class ReviewComponent extends React.Component {
                 params: { 'review_id': review.id }
               })
                 .then(({ data }) => {
-                  console.log('phots:', data);
+                  // console.log('phots:', data);
                   let new_album = [];
                   data.forEach(photo => {
                     new_album.push(photo.src)

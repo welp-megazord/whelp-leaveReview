@@ -3,8 +3,11 @@ This is a component that renders reviews from a postgre-sql database with mock r
 
 # Inserting data into mysql tables
 COPY users (name, counts, profilephoto, location) FROM '/Users/Kevin/Documents/HackReactor githubs/Capstone/SDC/fakeDataGenerator/data/users.txt';
+
 COPY photos (src, review_id, restaurant_id) FROM '/Users/Kevin/Documents/HackReactor githubs/Capstone/SDC/fakeDataGenerator/data/photos.txt';
+
 COPY restaurants (name) FROM '/Users/Kevin/Documents/HackReactor githubs/Capstone/SDC/fakeDataGenerator/data/restaurants.txt';
+
 COPY reviews (date, counts, rating, user_id, restaurant_id, description) FROM '/Users/Kevin/Documents/HackReactor githubs/Capstone/SDC/fakeDataGenerator/data/reviews.txt';
 
 # Adding foreign key constraint to tables
@@ -43,7 +46,7 @@ create index on reviews(user_id);
 
 
 
-#MONGODB
+# MONGODB
 mongoimport --db yelp --collection users --type tsv --drop --columnsHaveTypes --fields "_id.int32(),name.string(),counts.string(),profilephoto.string(),location.string()" --file users.tsv;
 
 mongoimport --db yelp --collection photos --type tsv --drop --columnsHaveTypes --fields "_id.int32(),src.string(),review_id.int32(),restaurant_id.int32()" --file photos.tsv;
@@ -52,11 +55,11 @@ mongoimport --db yelp --collection reviews --type tsv --drop --columnsHaveTypes 
 
 mongoimport --db yelp --collection restaurants --type tsv --drop --columnsHaveTypes --fields "_id.int32(),name.string()" --file restaurants.tsv;
 
-#Users
+# Users
 db.users.createIndex({rid: 1});
-#Photos
+# Photos
 db.photos.createIndex({review_id: 1});
 db.photos.createIndex({restaurant_id: 1});
-#Reviews
+# Reviews
 db.reviews.createIndex({user_id: 1});
 db.reviews.createIndex({restaurant_id: 1});

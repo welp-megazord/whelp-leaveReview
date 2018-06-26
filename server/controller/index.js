@@ -19,7 +19,6 @@ const POST = (model, req, res) => {
 const PUT = (model, req, res) => {
   const id = req.body.id;
   const newData = req.body.update[0];
-  console.log(newData.counts);
   model.find({
     where: {
       id: id
@@ -110,7 +109,7 @@ const photo_controllers = {
     })
       .then(data => {
         console.log('photo data received')
-        console.log(data);
+        // console.log(data);
         res.status(200).send(data)
       })
       .catch(err => {
