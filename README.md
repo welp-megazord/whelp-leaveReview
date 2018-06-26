@@ -1,6 +1,12 @@
 # Yelp-Review-Component
 This is a component that renders reviews from a postgre-sql database with mock reviews in. Designed to be a clone of Yelp's reviews microservice.
 
+# Inserting data into mysql tables
+COPY users (name, counts, profilephoto, location) FROM '/Users/Kevin/Documents/HackReactor githubs/Capstone/SDC/fakeDataGenerator/data/users.txt';
+COPY photos (src, review_id, restaurant_id) FROM '/Users/Kevin/Documents/HackReactor githubs/Capstone/SDC/fakeDataGenerator/data/photos.txt';
+COPY restaurants (name) FROM '/Users/Kevin/Documents/HackReactor githubs/Capstone/SDC/fakeDataGenerator/data/restaurants.txt';
+COPY reviews (date, counts, rating, user_id, restaurant_id, description) FROM '/Users/Kevin/Documents/HackReactor githubs/Capstone/SDC/fakeDataGenerator/data/reviews.txt';
+
 # Adding foreign key constraint to tables
 ALTER TABLE photos
 ADD CONSTRAINT review_id
@@ -38,7 +44,7 @@ create index on reviews(user_id);
 
 
 #MONGODB
-mongoimport --db yelp --collection users --type tsv --drop --columnsHaveTypes --fields "_id.int32(), name.string(), counts.string(),profilephoto.string(), location.string()" --file users.tsv;
+mongoimport --db yelp --collection users --type tsv --drop --columnsHaveTypes --fields "_id.int32(),name.string(),counts.string(),profilephoto.string(),location.string()" --file users.tsv;
 
 mongoimport --db yelp --collection photos --type tsv --drop --columnsHaveTypes --fields "_id.int32(),src.string(),review_id.int32(),restaurant_id.int32()" --file photos.tsv;
 
