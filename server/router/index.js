@@ -1,9 +1,15 @@
 const router = require('express').Router();
 
-const { user_controllers } = require('../controller/index.js');
-const { photo_controllers } = require('../controller/index.js');
-const { restaurant_controllers } = require('../controller/index.js');
-const { review_controllers } = require('../controller/index.js');
+// const { user_controllers } = require('../controller/index.js');
+// const { photo_controllers } = require('../controller/index.js');
+// const { restaurant_controllers } = require('../controller/index.js');
+// const { review_controllers } = require('../controller/index.js');
+
+// MONGODB
+const { user_controllers } = require('../mongo_controller');
+const { photo_controllers } = require('../mongo_controller');
+const { restaurant_controllers } = require('../mongo_controller');
+const { review_controllers } = require('../mongo_controller');
 
 
 router.route('/users')

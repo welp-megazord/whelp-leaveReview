@@ -4,7 +4,7 @@ const express = require('express');
 
 const PORT = process.env.PORT || 3000;
 const App = express();
-require('../database_postgresql');
+// require('../database_postgresql');
 // require('../database_mongodb');
 const {router} = require('./router');
 

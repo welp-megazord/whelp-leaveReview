@@ -29,12 +29,13 @@ export default class ReviewComponent extends React.Component {
         ID: restaurantID
       }
     })
-      .then(({ data }) => {
+      .then(({data}) => {
+        console.log(data);
         console.log('rest name: ', data[0].name);
-        console.log('rest id:', data[0].id);
+        console.log('rest id:', restaurantID);
         this.setState({
           RestaurantName: data[0].name,
-          RestaurantID: data[0].id,
+          RestaurantID: restaurantID,
         })
         this.loadReviews();
       });
@@ -42,17 +43,18 @@ export default class ReviewComponent extends React.Component {
 
   loadReviews() {
     axios.get('api/reviews', {
-      params: { 'restaurant_id': this.state.RestaurantID }
+      params: {'restaurant_id': this.state.RestaurantID }
     })
       .then(({ data }) => {
         let reviews = [];
-        // console.log('in reviews: ', data)
+        console.log('in reviews: ', data)
         this.setState({
           update: true
         })
         data.forEach(review => {
           let counts = review.counts.split(',');
-          const reviewID = review.id;
+          // const reviewID = review._id;
+          // console.log(reviewID);
           let newReview = {
             username: null,
             location: null,
@@ -80,9 +82,9 @@ export default class ReviewComponent extends React.Component {
               newReview.reviews_count = user_counts[1]
               newReview.photos_count = user_counts[2]
               newReview.img_src = data[0].profilephoto
-              // console.log('review id: ', review.id);
+              console.log('review id: ', review._id);
               axios.get('api/photos', {
-                params: { 'review_id': review.id }
+                params: { 'review_id': review._id }
               })
                 .then(({ data }) => {
                   // console.log('phots:', data);

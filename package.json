@@ -46,6 +46,7 @@
     "webpack-cli": "^2.1.4"
   },
   "devDependencies": {
+    "artillery": "^1.6.0-21",
     "style-loader": "^0.21.0"
   }
 }
