@@ -1,3 +1,7 @@
 node_modules
 database_mongodb/data
 client/dist/bundle.js
+.env
+newrelic.js
+dump.rdb
+newrelic_agent.log

@@ -10,7 +10,7 @@ const POST = (op, req, res) => {
       res.status(200).send('Success');
     })
     .catch(err => {
-      console.log('Err in users post: ', err);
+      // console.log('Err in users post: ', err);
       res.status(404).send('ERROR');
     })
 };
@@ -23,7 +23,7 @@ const DELETE = (op, req, res) => {
       res.status(200).send('Data has been deleted');
     })
     .catch(err => {
-      console.log('Err in delete: ', err);
+      // console.log('Err in delete: ', err);
       res.status(404).send('ERROR');
     })
 };
@@ -38,20 +38,20 @@ const PUT = (op, req, res) => {
       res.status(200).send('Data has been updated');
     })
     .catch(err => {
-      console.log('Err in PUT ', err);
+      // console.log('Err in PUT ', err);
       res.status(404).send('ERROR');
     })
 }
 
 user_controllers = {
   get: (req, res) => {
-    db().collection('users').findOne({ _id: +req.query.user_id })
+    db().collection('users').findOne({ _id: +req.query.user_id }, {fields: {_id: 0}})
       .then(data => {
-        // console.log(data);
+        // console.log('user get request');
         res.status(200).send([data]);
       })
       .catch(err => {
-        console.log('Err in users: ', err);
+        // console.log('Err in users: ', err);
         res.status(401).send('ERROR');
       })
   },
@@ -63,7 +63,7 @@ user_controllers = {
       .then(data => {
         db().collection('reviews').deleteMany({user_id: req.body.id})
           .then(data => {
-            console.log('Deleted');
+            // console.log('Deleted');
             res.status(200).send('Data has been deleted');
           })
           .catch(err => {
@@ -81,8 +81,9 @@ user_controllers = {
 
 photo_controllers = {
   get: (req, res) => {
-    db().collection('photos').find({ review_id: +req.query.review_id }).toArray()
+    db().collection('photos').find({ review_id: +req.query.review_id }, {fields: {_id: 0, review_id: 0, restaurant_id: 0}}).toArray()
       .then(data => {
+        // console.log('photo request');
         res.status(200).send(data);
       })
       .catch(err => {
@@ -103,13 +104,15 @@ photo_controllers = {
 
 restaurant_controllers = {
   get: (req, res) => {
-    db().collection('restaurants').find({ _id: +req.query.ID }).toArray()
+    db().collection('restaurants').findOne({ _id: +req.query.ID }, {fields: {_id: 0}})
       .then(row => {
-        console.log(row);
-        res.status(200).send(row);
+        // console.log(req.query.ID);
+        // console.log(row);
+        // console.log('restaurant request');
+        res.status(200).send([row]);
       })
       .catch(err => {
-        console.log('Err in restaurant GET: ', err);
+        // console.log('Err in restaurant GET: ', err);
         res.status(401).send('ERROR');
       })
   },
@@ -126,17 +129,17 @@ restaurant_controllers = {
                 res.status(200).send('Data has been deleted');
               })
               .catch(err => {
-                console.log('error in restaurants delete: ', err);
+                // console.log('error in restaurants delete: ', err);
                 res.status(400).send('ERROR');
               })
           })
           .catch(err => {
-            console.log('error in restaurants delete: ', err);
+            // console.log('error in restaurants delete: ', err);
             res.status(400).send('ERROR');
           })
       })
       .catch(err => {
-        console.log('error in restaurants delete: ', err);
+        // console.log('error in restaurants delete: ', err);
         res.status(400).send('ERROR');
       })
   },
@@ -147,13 +150,16 @@ restaurant_controllers = {
 
 review_controllers = {
   get: (req, res) => {
-    db().collection('reviews').find({ restaurant_id: +req.query.restaurant_id }).toArray()
+    // console.log('get request');
+    db().collection('reviews').find({ restaurant_id: +req.query.restaurant_id }, {fields: {restaurant_id: 0}}).toArray()
       .then(data => {
-        console.log(data);
+        // console.log(data);
+        // console.log(req.query.restaurant_id)
+        // console.log('review request');
         res.status(200).send(data);
       })
       .catch(err => {
-        console.log('err in reviews: ', err);
+        // console.log('err in reviews: ', err);
         res.status(404).send('ERROR');
       })
   },
@@ -168,12 +174,12 @@ review_controllers = {
             res.status(200).send('Data has been deleted');
           })
           .catch(err => {
-            console.log('Err in review delete: ', err);
+            // console.log('Err in review delete: ', err);
             res.status(401).send('ERROR');
           })
       })
       .catch(err => {
-        console.log('Err in review delete: ', err);
+        // console.log('Err in review delete: ', err);
         res.status(401).send('ERROR');
       })
   },

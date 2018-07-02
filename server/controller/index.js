@@ -81,7 +81,7 @@ const user_controllers = {
       }
     })
       .then(data => {
-        console.log('user data received')
+        // console.log('user data received')
         res.status(200).send(data)
       })
       .catch(err => {
@@ -108,7 +108,7 @@ const photo_controllers = {
       }
     })
       .then(data => {
-        console.log('photo data received')
+        // console.log('photo data received')
         // console.log(data);
         res.status(200).send(data)
       })
@@ -137,7 +137,7 @@ const restaurant_controllers = {
       }
     })
       .then(data => {
-        console.log('restaurant data received');
+        // console.log('restaurant data received');
         res.status(200).send(data)
       })
       .catch(err => {
@@ -167,7 +167,7 @@ const review_controllers = {
     })
       // reviews.findById(id)
       .then(data => {
-        console.log('review data received')
+        // console.log('review data received')
         res.status(200).send(data)
       })
       .catch(err => {

@@ -1,9 +1,25 @@
 config:
-  target: 'http://localhost:3000'
+  target: 'http://localhost:2000'
   phases:
     - duration: 10
-      arrivalRate: 2000 
+      arrivalRate: 100
 scenarios:
   - flow:
-    - get:
-        url: "/"
+    # - get: 
+    #     url: "/api/reviews?restaurant_id={{ $randomNumber(1,10000000) }}"
+    # - get:
+    #     url: "/api/restaurants?ID={{ $randomNumber(1,10000000) }}"
+    # - get:
+    #     url: "/api/users?user_id={{ $randomNumber(1,10000000) }}"
+    # - get:
+    #     url: "/api/photos?review_id= {{ $randomNumber(1,10000000) }}"
+    - loop:
+      - get: 
+          url: "/api/reviews?restaurant_id={{ $randomNumber(9800000,10000000) }}"
+      - get:
+          url: "/api/restaurants?ID={{ $randomNumber(9800000,10000000) }}"
+      - get:
+          url: "/api/users?user_id={{ $randomNumber(9800000,10000000) }}"
+      - get:
+          url: "/api/photos?review_id= {{ $randomNumber(9800000,10000000) }}"
+      count: 1
