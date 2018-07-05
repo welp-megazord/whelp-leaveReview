@@ -8,7 +8,7 @@ let userID = 1;
 let photoID = 1;
 let restID = 1;
 let reviewID = 1;
-const totalData = 10000000;
+const totalData = 9000000;
 const photoURL = [
   'https://s3-media3.fl.yelpcdn.com/bphoto/LL_ibUp-R_2-iXkdO4V4-Q/o.jpg', 
   'https://s3-media1.fl.yelpcdn.com/bphoto/FBoLLCJsOE2lL-Mbcy9S9w/o.jpg',
@@ -47,28 +47,15 @@ const photoURL = [
   'https://s3-media3.fl.yelpcdn.com/bphoto/75SLAExTKsx2wdm9TFr0nw/o.jpg'
 ]
 const userReviews = [
-  'I LOVE Hungry Bear. Absolutely awesome. The atmosphere of the place was comfortable af. I now feel bomb as F#!K. Bring your friends and family to Hungry Bear to try the Fries',
-  'Turn around. Hungry Bear is not worth your money. The manager especially was awful. If you get the Burger, expect it to be soggy. I couldnt believe it. When my tastebuds made contact with the Fries, I felt disgusted. I have to give the place a 1 out of 5.', 
-  'Hungry Bear was the most delicious experience of my life so far. And the staff? Dont even get me started. They were excellent. The first thing I thought when I saw the menu was "yummy!" It is my distinct honor to give this place a 3 out of 5.',
-  'Pho ck You was the most dank experience of my life so far. I now feel good $#!T. the Pho was filling. And with that, I can now happily die.',
-  'bomb. Thats the only word I can use to describe Pho ck You. I now feel just right. The manager especially was filling. If you come here, expect to feel excellent! And with that, I can now happily die.',
-  'Looking for a place to eat? Look no further. Sushi Sasabune is the place for you. the Scallop was the $#!T. the Butterfish was bomb as F#!K. Now go. Spread the word of Sushi Sasabune and their filling Blue crab roll.',
-  'I LOVE Sushi Sasabune. The smell in the air as I walked inside... completely dank. I now feel excellent. It is my distinct honor to give this place a 5 out of 5.',
-  'I have to give Sushi Sasabune a 2. The atmosphere of the place was commendable. The manager especially was filling. I have to give the place a 4 out of 5.',
-  'delightful. Thats the only word I can use to describe Manhatten Beach Post. The atmosphere of the place was the $#!T. Absolutely just right. Bring your friends and family to Manhatten Beach Post to try the Caramel Tuile',
-  'Manhatten Beach Post is the most crap place I have ever eaten at! The first thing I thought when I saw the menu was "bland!" The atmosphere of the place was $#!t. And the staff? Dont even get me started. They were repulsive. Thats why I have to give Manhatten Beach Post a 2.',
-  'I LOVE Lucha Libre. the California Surfin Burrito was delightful. The smell in the air as I walked inside... completely DANK. the California Surfin Burrito was delicious. Bring your friends and family to Lucha Libre to try the California Surfin Burrito',
-  'Looking for a place to eat? Look no further. Lucha Libre is the place for you. The atmosphere of the place was good $#!T. I now feel bomb as F#!K. It is my distinct honor to give this place a 3 out of 5.',
-  'Dont even think about coming to Lucha Libre! The first thing I thought when I saw the menu was "distateful!" If you come here, expect to feel sour! The first thing I thought when I saw the menu was "$#!t!" All in all, just know I warned you. Dont get the California Surfin Burrito.',
-  'Looking for a place to eat? Look no further. Joshs Kitchen is the place for you. I couldnt believe it. When my tastebuds made contact with the Lobster, I was in a dank place. The first thing I thought when I saw the menu was "dank!" And with that, I can now happily die.',
-  'delicious. Thats the only word I can use to describe Joshs Kitchen. And the staff? Dont even get me started. They were filling. the Seabass was yummy. If you come here, expect to feel amazing! Now go. Spread the word of Joshs Kitchen and their good $#!T Seabass.',
-  'the $#!T. Thats the only word I can use to describe Ivory on Sunset. If you get the Shrimp Cocktail, expect it to be yummy. I now feel the $#!T. If you get the Shrimp Cocktail, expect it to be bomb as F#!K. It is my distinct honor to give this place a 5 out of 5.',
-  'Looking for a place to eat? Look no further. Ivory on Sunset is the place for you. Absolutely excellent. And the staff? Dont even get me started. They were good. Absolutely delicious. It is my distinct honor to give this place a 4 out of 5.',
-  'I LOVE Ivory on Sunset. If you get the Shrimp Cocktail, expect it to be good. If you come here, expect to feel commendable! And with that, I can now happily die.',
-  'Del Friscos Grille was the most bomb experience of my life so far. The manager especially was bomb. Absolutely bomb as F#!K. I now feel excellent. Bring your friends and family to Del Friscos Grille to try the Nutella Bread Pudding',
-  'These are the reasons why I have to give Del Friscos Grille a 2. the Steakhouse Salad was distateful. I now feel awful. If you get the Steakhouse Salad, expect it to be bad. Thats why I have to give Del Friscos Grille a 3.',
-  'I give Del Friscos Grille a well deserved 4 out of 5. I couldnt believe it. When my tastebuds made contact with the Nutella Bread Pudding, I was in a just right place. If you get the Nutella Bread Pudding, expect it to be commendable. If you come here, expect to feel excellent! Bring your friends and family to Del Friscos Grille to try the Nutella Bread Pudding',
-  'Dont even think about coming to Del Friscos Grille! And the staff? Dont even get me started. They were shallow. Absolutely bad. Overall, I can go the rest of my life without ever coming back!',
+  'Turn around. Hungry Bear is not worth your money.', 
+  'Hungry Bear was the most delicious experience of my life so far.',
+  'Pho ck You was the most dank experience of my life so far.',
+  'bomb. Thats the only word I can use to describe Pho ck You.',
+  'I LOVE Sushi Sasabune. The smell in the air as I walked inside... completely dank.',
+  'Manhatten Beach Post is the most crap place I have ever eaten at!',
+  'I LOVE Lucha Libre. the California Surfin Burrito was delightful.',
+  'Del Friscos Grille was the most bomb experience of my life so far.',
+  'I give Del Friscos Grille a well deserved 4 out of 5. I couldnt believe it.',
 ]
 
 const generateUsers = () => {
@@ -149,17 +136,17 @@ const writeData = (writer, generator, time, callback) => {
   write();
 }
 const dataFolder = path.join(__dirname, 'data');
-// const userWriter = fs.createWriteStream(`${dataFolder}/users.tsv`, {encoding: 'utf8'});
+const userWriter = fs.createWriteStream(`${dataFolder}/users.tsv`, {encoding: 'utf8'});
 const photoWriter = fs.createWriteStream(`${dataFolder}/photos.tsv`, {encoding: 'utf8'});
 const restaurantWriter = fs.createWriteStream(`${dataFolder}/restaurants.tsv`, {encoding: 'utf8'});
 const reviewWriter = fs.createWriteStream(`${dataFolder}/reviews.tsv`, {encoding: 'utf8'});
 
 const promisifiedWrite = Promise.promisify(writeData);
 
-// callWrite(userWriter, generateUsers, 'users', () => {
-//   console.log('Users');
-//   console.timeEnd('users');
-// });
+callWrite(userWriter, generateUsers, 'users', () => {
+  console.log('Users');
+  console.timeEnd('users');
+});
 
 callWrite(photoWriter, generatePhotos, 'photos', () => {
   console.log('Photos');

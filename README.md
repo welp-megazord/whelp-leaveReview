@@ -55,11 +55,19 @@ mongoimport --db yelp --collection reviews --type tsv --drop --columnsHaveTypes 
 
 mongoimport --db yelp --collection restaurants --type tsv --drop --columnsHaveTypes --fields "_id.int32(),name.string()" --file restaurants.tsv;
 
-# Users
-db.users.createIndex({rid: 1});
+
 # Photos
 db.photos.createIndex({review_id: 1});
 db.photos.createIndex({restaurant_id: 1});
 # Reviews
 db.reviews.createIndex({user_id: 1});
 db.reviews.createIndex({restaurant_id: 1});
+
+#DOCKER
+Remove all stopped containers - docker rm $(docker ps -a -q) 
+Get into running docker bash - docker exec -it (container ID) bash - to get into bash shell
+
+mongoimport --db yelp --collection restaurants --type tsv --file restaurants.tsv --fields _id,name
+mongoimport --db yelp --collection users --type tsv --file users.tsv --fields _id,name,counts,profilephoto,location
+mongoimport --db yelp --collection reviews --type tsv --file reviews.tsv --fields _id,date,counts,rating,user_id,restaurant_id,description
+mongoimport --db yelp --collection photos --type tsv --file photos.tsv --fields _id,src,review_id,restaurant_id

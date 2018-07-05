@@ -1,0 +1,4 @@
+node_modules
+aws
+npm-debug.log
+database_mongodb/data

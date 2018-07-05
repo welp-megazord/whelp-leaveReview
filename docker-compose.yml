@@ -1,0 +1,14 @@
+version: '3'
+services:
+  mongo:
+    image: mongo
+    volumes:
+      - mongodata:/data/db
+    # environment:
+    #   MONGO_URL: mongodb://localhost:27017/yelp
+    #   MONGO_USER: Kevin
+    #   MONGO_DB: yelp
+    ports:
+      - "27017:27017"
+volumes:
+  mongodata:
