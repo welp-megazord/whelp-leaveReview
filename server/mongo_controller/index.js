@@ -45,6 +45,7 @@ const PUT = (op, req, res) => {
 
 user_controllers = {
   get: (req, res) => {
+    // console.log('user get request');
     db().collection('users').findOne({ _id: +req.query.user_id }, {fields: {_id: 0}})
       .then(data => {
         // console.log('user get request');

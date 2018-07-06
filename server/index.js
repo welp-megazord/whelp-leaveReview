@@ -5,7 +5,7 @@ const path = require('path');
 const express = require('express');
 
 const env = require('dotenv').config();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 2000;
 const App = express();
 
 // require('../database_postgresql');

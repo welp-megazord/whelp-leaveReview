@@ -66,6 +66,7 @@ db.reviews.createIndex({restaurant_id: 1});
 #DOCKER
 Remove all stopped containers - docker rm $(docker ps -a -q) 
 Get into running docker bash - docker exec -it (container ID) bash - to get into bash shell
+Pushing image up to docker hub - docker tag bb38976d03cf yourhubusername/verse_gapminder:firsttry
 
 mongoimport --db yelp --collection restaurants --type tsv --file restaurants.tsv --fields _id,name
 mongoimport --db yelp --collection users --type tsv --file users.tsv --fields _id,name,counts,profilephoto,location

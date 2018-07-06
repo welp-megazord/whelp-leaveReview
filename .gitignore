@@ -1,6 +1,8 @@
 node_modules
-database_mongodb/data
 client/dist/bundle.js
+
+database_mongodb/data
+
 .env
 newrelic.js
 dump.rdb
