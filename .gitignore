@@ -7,3 +7,4 @@ database_mongodb/data
 newrelic.js
 dump.rdb
 newrelic_agent.log
+loaderIO

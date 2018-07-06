@@ -72,3 +72,6 @@ mongoimport --db yelp --collection restaurants --type tsv --file restaurants.tsv
 mongoimport --db yelp --collection users --type tsv --file users.tsv --fields _id,name,counts,profilephoto,location
 mongoimport --db yelp --collection reviews --type tsv --file reviews.tsv --fields _id,date,counts,rating,user_id,restaurant_id,description
 mongoimport --db yelp --collection photos --type tsv --file photos.tsv --fields _id,src,review_id,restaurant_id
+
+NGINX
+/usr/local/etc/nginx

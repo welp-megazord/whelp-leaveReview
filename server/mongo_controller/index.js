@@ -45,7 +45,6 @@ const PUT = (op, req, res) => {
 
 user_controllers = {
   get: (req, res) => {
-    // console.log('user get request');
     db().collection('users').findOne({ _id: +req.query.user_id }, {fields: {_id: 0}})
       .then(data => {
         // console.log('user get request');
@@ -151,7 +150,6 @@ restaurant_controllers = {
 
 review_controllers = {
   get: (req, res) => {
-    // console.log('get request');
     db().collection('reviews').find({ restaurant_id: +req.query.restaurant_id }, {fields: {restaurant_id: 0}}).toArray()
       .then(data => {
         // console.log(data);
