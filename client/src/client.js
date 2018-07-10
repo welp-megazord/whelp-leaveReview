@@ -1,3 +1,3 @@
-import ReviewComponent from './ReviewComponent.jsx';
+import Reviews from './ReviewComponent.jsx';
 
-window.ReviewComponent = ReviewComponent;
+window.Reviews = Reviews;

@@ -1,3 +1,3 @@
-import ReviewComponent from './ReviewComponent.jsx';
+import Reviews from './ReviewComponent.jsx';
 
-export default ReviewComponent;
+export default Reviews;

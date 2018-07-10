@@ -4,7 +4,7 @@ const DIST_DIR = path.join(__dirname, '/client/dist');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const common = {
+const server_config = {
   module: {
     rules: [
       {
@@ -30,23 +30,23 @@ const common = {
           }
         }]
       },
-      // {
-      //   test: /\.css$/,
-      //   use: ExtractTextPlugin.extract({ fallback: 'style-loader', use: ['css-loader'] })
-      // },
       {
         test: /\.css$/,
-        loader: 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]'
+        use: ExtractTextPlugin.extract({ fallback: 'style-loader', use: ['css-loader'] })
       },
+      // {
+      //   test: /\.css$/,
+      //   loader: 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]'
+      // },
     ],
   },
-  // plugins: [
-  //   // new ExtractTextPlugin({ filename: `${DIST_DIR}/style.css`, disable: false, allChunks: true })
-  //   new ExtractTextPlugin('style.css')
-  // ]
+  plugins: [
+    // new ExtractTextPlugin({ filename: `${DIST_DIR}/style.css`, disable: false, allChunks: true })
+    new ExtractTextPlugin('style.css')
+  ]
 };
 
-const dev_client = {
+const client_config = {
   module: {
     rules: [
       {
@@ -60,7 +60,8 @@ const dev_client = {
       },
       {
         test: /\.css$/,
-        loader: 'style-loader!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]'
+        // loader: 'style-loader!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
+        use:['style-loader','css-loader']
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
@@ -100,6 +101,6 @@ const server = {
 };
 
 module.exports = [
-  Object.assign({}, dev_client, client),
-  Object.assign({}, common, server)
+  Object.assign({}, client_config, client),
+  Object.assign({}, server_config, server)
 ];
