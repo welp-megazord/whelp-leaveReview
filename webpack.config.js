@@ -1,9 +1,52 @@
 const path = require('path');
 const SRC_DIR = path.join(__dirname, '/client/src');
 const DIST_DIR = path.join(__dirname, '/client/dist');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const common = {
+  module: {
+    rules: [
+      {
+        test: /\.jsx?/,
+        include: SRC_DIR,
+        use: [
+          {
+            loader: "babel-loader"
+          }
+        ]
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        loaders: ['file-loader?context=src/images&name=images/[path][name].[ext]', {
+          loader: 'image-webpack-loader',
+          query: {
+            gifsicle: {
+              interlaced: false,
+            },
+            optipng: {
+              optimizationLevel: 7,
+            },
+          }
+        }]
+      },
+      // {
+      //   test: /\.css$/,
+      //   use: ExtractTextPlugin.extract({ fallback: 'style-loader', use: ['css-loader'] })
+      // },
+      {
+        test: /\.css$/,
+        loader: 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]'
+      },
+    ],
+  },
+  // plugins: [
+  //   // new ExtractTextPlugin({ filename: `${DIST_DIR}/style.css`, disable: false, allChunks: true })
+  //   new ExtractTextPlugin('style.css')
+  // ]
+};
+
+const dev_client = {
   module: {
     rules: [
       {
@@ -32,10 +75,10 @@ const common = {
             },
           }
         }]
-      }
+      },
     ],
   },
-};
+}
 
 const client = {
   entry: `${SRC_DIR}/client.js`,
@@ -57,6 +100,6 @@ const server = {
 };
 
 module.exports = [
-  Object.assign({}, common, client),
+  Object.assign({}, dev_client, client),
   Object.assign({}, common, server)
 ];

@@ -52,6 +52,7 @@
   "devDependencies": {
     "artillery": "^1.6.0-21",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "html-webpack-plugin": "^3.2.0",
     "newrelic": "^4.2.0",
     "style-loader": "^0.21.0"
   }
