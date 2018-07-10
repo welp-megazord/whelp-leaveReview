@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import ReviewComponent from './ReviewComponent.jsx';
 
-export default class App extends React.Component {
+export default class Reviews extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -19,4 +19,4 @@ export default class App extends React.Component {
     }
 }
 
-ReactDOM.render(< App/>, document.getElementById('app'));
+ReactDOM.render(<Reviews />, document.getElementById('reviews'));

@@ -139,6 +139,6 @@ export default class ReviewComponent extends React.Component {
         }
         {this.state.writeReview ? < WriteReview toggledRating={this.state.toggledRating} writeReviewToggleOff={this.writeReviewToggleOff.bind(this)} RestaurantID={this.state.RestaurantID} RestaurantName={this.state.RestaurantName} /> : null}
       </div>
-    )
+    );
   }
 }
