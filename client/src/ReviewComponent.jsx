@@ -24,7 +24,6 @@ export default class ReviewComponent extends React.Component {
     const sizeOfDatabase = 8999999;
     // const random = Math.floor(Math.random() * Math.floor(10000000));
     let restaurantID = Math.floor(Math.random() * Math.floor(sizeOfDatabase));
-    console.log(restaurantID);
     axios.get('/api/restaurants', {
       params: {
         ID: restaurantID
